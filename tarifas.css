@@ -1,0 +1,240 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f0fdfa;
+    color: #1f2937;
+    overflow-x: hidden;
+  }
+  
+  /* Fondo degradado solo en pantallas grandes */
+  @media (min-width: 481px) {
+    body {
+      background: linear-gradient(to right, #e0f2fe, #f0fdfa);
+    }
+  }
+  
+  /* HERO SECTION */
+  .hero {
+    text-align: center;
+    padding: 60px 20px 30px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    max-width: 720px;
+    margin: 40px auto 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  }
+  
+  /* Títulos */
+  .hero h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #0f172a;
+  }
+  
+  .hero p {
+    font-size: 16px;
+    color: #4b5563;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* PRICING SECTION */
+  .pricing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 40px 20px;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Tarjetas */
+  .card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: 30px 24px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-top: 6px solid #e5e7eb;
+  }
+  
+  .card:hover {
+    transform: translateY(-6px);
+  }
+  
+  .card h3 {
+    font-size: 20px;
+    color: #0f172a;
+    margin-bottom: 8px;
+  }
+  
+  .card h3 i {
+    margin-right: 6px;
+    color: #10b981;
+  }
+  
+  .price {
+    font-size: 26px;
+    font-weight: bold;
+    color: #10b981;
+    margin: 16px 0;
+  }
+  
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+  }
+  
+  .card ul li {
+    font-size: 15px;
+    padding: 6px 0;
+    color: #4b5563;
+  }
+  
+  /* Botones */
+  .btn {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    color: white;
+    background-color: #3b82f6;
+  }
+  
+  .btn:hover {
+    background-color: #2563eb;
+  }
+  
+  /* Colores temáticos */
+  .card:nth-child(1) .btn { background-color: #3b82f6; }
+  .card:nth-child(2) .btn { background-color: #10b981; }
+  .card:nth-child(3) .btn { background-color: #6366f1; }
+  .card:nth-child(4) .btn { background-color: #f97316; }
+  .card:nth-child(5) .btn { background-color: #fbbf24; color: #1f2937; }
+  
+  .card:nth-child(1):hover .btn { background-color: #2563eb; }
+  .card:nth-child(2):hover .btn { background-color: #059669; }
+  .card:nth-child(3):hover .btn { background-color: #4f46e5; }
+  .card:nth-child(4):hover .btn { background-color: #ea580c; }
+  .card:nth-child(5):hover .btn { background-color: #f59e0b; }
+  
+  /* Tarjeta destacada */
+  .destacado {
+    border: 1.5px solid #10b981;
+    background: #f0fdf4;
+  }
+  
+  .destacado h3 {
+    color: #0f766e;
+  }
+  
+  /* Política de cancelación */
+  .politica {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px 24px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 14px;
+    color: #4b5563;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .politica h4 {
+    font-size: 16px;
+    color: #0f172a;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  
+  .politica p {
+    margin: 6px 0;
+    line-height: 1.5;
+  }
+  
+  .politica a {
+    color: #3b82f6;
+    text-decoration: none;
+  }
+  .politica a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive general */
+  @media (max-width: 768px) {
+    .pricing {
+      flex-direction: column;
+      align-items: center;
+      padding: 16px 12px;
+      gap: 12px;
+    }
+  
+    .card {
+      width: 100%;
+      padding: 20px 16px;
+      border-radius: 12px;
+    }
+  
+    .btn {
+      width: 100%;
+      padding: 12px 16px;
+      font-size: 15px;
+    }
+  
+    .price {
+      font-size: 22px;
+    }
+  
+    .card h3 {
+      font-size: 18px;
+    }
+  
+    .card ul li {
+      font-size: 14px;
+    }
+  }
+  
+  /* Extra mejora para móviles pequeños */
+  @media (max-width: 400px) {
+    .pricing {
+      padding: 12px 8px;
+    }
+  
+    .card {
+      padding: 18px 12px;
+    }
+  
+    .btn {
+      font-size: 14px;
+      padding: 10px 14px;
+    }
+  }
+  

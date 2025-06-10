@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonos Readaptación con Ejercicio - ROR</title>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tarifas.css">
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Bonos de Readaptación con Ejercicio</h1>
+        <p>Un enfoque 100% práctico: sesiones centradas en ejercicios progresivos para recuperar funcionalidad y rendimiento, sin trámites ni valoraciones adicionales.</p>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section class="pricing">
+        <!-- Sesión suelta -->
+        <div class="card">
+            <h3><i>🏋️‍♂️</i> Sesión suelta</h3>
+            <p class="price">42&nbsp;€</p>
+            <ul>
+                <li>Ejercicios específicos adaptados al objetivo inmediato</li>
+                <li>Enfoque práctico en movimiento y técnica</li>
+                <li>Recomendaciones de ajustes para casa o gimnasio</li>
+            </ul>
+            <button class="btn" data-plan="Sesión suelta">Solicitar sesión</button>
+        </div>
+        <!-- Bono 4 sesiones -->
+        <div class="card">
+            <h3><i>💪</i> Bono 4 sesiones</h3>
+            <p class="price">160&nbsp;€</p>
+            <ul>
+                <li>4 sesiones con progresión de ejercicios planificada</li>
+                <li>Ajustes continuos según respuesta al entrenamiento</li>
+                <li>Consejos prácticos para integración en la rutina diaria</li>
+            </ul>
+            <button class="btn" data-plan="Bono 4 sesiones">Contratar bono</button>
+        </div>
+        <!-- Bono 8 sesiones (destacado) -->
+        <div class="card destacado">
+            <h3><i>🌟</i> Bono 8 sesiones</h3>
+            <p class="price">300&nbsp;€</p>
+            <ul>
+                <li>8 sesiones con plan progresivo centrado en ejercicios clave</li>
+                <li>Seguimiento práctico del avance en cada sesión</li>
+                <li>Adaptaciones y variantes para mantener la motivación</li>
+            </ul>
+            <button class="btn" data-plan="Bono 8 sesiones">Elegir este bono</button>
+        </div>
+        <!-- Bono 12 sesiones -->
+        <div class="card">
+            <h3><i>🏆</i> Bono 12 sesiones</h3>
+            <p class="price">420&nbsp;€</p>
+            <ul>
+                <li>12 sesiones para un programa integral de readaptación</li>
+                <li>Progresión detallada y ajustes periódicos en cada etapa</li>
+                <li>Soporte continuo: dudas y consejos entre sesiones</li>
+            </ul>
+            <button class="btn" data-plan="Bono 12 sesiones">Contratar ahora</button>
+        </div>
+    </section>
+
+<!-- POLÍTICA DE CANCELACIÓN / TÉRMINOS -->
+<section class="politica">
+    <h4>Política de cancelación y condiciones</h4>
+    <p>Las cancelaciones o modificaciones deben comunicarse con al menos 24 horas de antelación; notificaciones tardías pueden conllevar el cargo íntegro de la sesión.</p>
+    <p>Se facilita todo el material necesario; el participante solo debe presentarse con disposición para realizar los ejercicios.</p>
+    <p>Para requerimientos específicos (lesión, fase postoperatoria, historial de readaptación), indíquelo al reservar para disponer del protocolo y equipamiento adecuado.</p>
+    
+    
+    <p class="autor" style="margin-top: 12px; font-weight: 500;">Ricardo Osuna Rodríguez</p>
+</section>
+
+
+    <!-- SCRIPT para WhatsApp -->
+    <script>
+        (function() {
+            // Número de WhatsApp en formato internacional sin signos: país + número.
+            const telefono = '34633090021'; // 34 + 633090021
+            // Texto base, se agregará el plan seleccionado.
+            const textoBase = 'Hola Ricardo, estoy interesado en:';
+
+            // Seleccionamos todos los botones de clase .btn dentro de .pricing
+            const botones = document.querySelectorAll('.pricing .btn');
+            botones.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Obtenemos el plan desde el atributo data-plan
+                    const plan = this.getAttribute('data-plan') || '';
+                    // Construimos el texto con el plan
+                    const mensaje = encodeURIComponent(`${textoBase} ${plan}`);
+                    // URL de WhatsApp
+                    const url = `https://wa.me/${telefono}?text=${mensaje}`;
+                    // Abrimos en nueva pestaña/ventana
+                    window.open(url, '_blank');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
+
